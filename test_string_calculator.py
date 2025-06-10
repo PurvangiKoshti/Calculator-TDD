@@ -11,4 +11,10 @@ def test_add_single_number():
 
 def test_add_two_numbers():
     calculator = StringCalculator()
-    assert calculator.add("1,2") == 3 
+    assert calculator.add("1,2") == 3
+
+def test_add_multiple_numbers():
+    calculator = StringCalculator()
+    assert calculator.add("1,2,3,4,5") == 15
+    assert calculator.add("10,20,30") == 60
+    assert calculator.add("1,1,1,1,1,1,1,1,1,1") == 10 
